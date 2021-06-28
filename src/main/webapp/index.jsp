@@ -14,8 +14,10 @@ function githubdeploy()
     var ref = $('#ref').val();    
 	var sfdeployurl =
 		$('#production').attr('checked') ?
-			'https://githubsfdeploy.herokuapp.com/app/githubdeploy' :
-			'https://githubsfdeploy-sandbox.herokuapp.com/app/githubdeploy';
+			// 'https://githubsfdeploy.herokuapp.com/app/githubdeploy' :?
+			'https://b2dev-ops-app.herokuapp.com/app/githubdeploy' :
+			// 'https://githubsfdeploy-sandbox.herokuapp.com/app/githubdeploy';
+			'https://b2dev-ops-app.herokuapp.com/app/githubdeploy';
 	sfdeployurl+= '/' + $('#owner').val() + '/' + $('#repo').val() + (ref != '' ? '?ref=' + ref : '');
 	window.location = sfdeployurl;
 }
@@ -34,8 +36,10 @@ function updatebuttonhtml()
 	var ref = $('#ref').val();
 	var buttonhtml =
 		( $('#blogpaste').attr('checked') == 'checked' ? 
-			'<a href="https://githubsfdeploy.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
-			'<a href="https://githubsfdeploy.herokuapp.com">\n') +					
+			// '<a href="https://githubsfdeploy.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
+			'<a href="https://b2dev-ops-app.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
+			// '<a href="https://githubsfdeploy.herokuapp.com">\n') +
+			'<a href="https://b2dev-ops-app.herokuapp.com/">\n') +
 			'  <img alt="Deploy to Salesforce"\n' +
 			'       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">\n' +
 		'</a>';
@@ -95,7 +99,7 @@ function load()
 				</div>
 				<div class="slds-media__body">
 				  <p class="slds-page-header__title slds-truncate slds-align-middle">GitHub Salesforce Deploy Tool</p>
-				  <p class="slds-text-body--small slds-page-header__info">Deploy directly from GitHub to Salesforce <a target="_new" href="http://andyinthecloud.com/category/githubsfdeploy/" class="brand" id="heroku"><strong>andyinthecloud</strong></a></p>
+					  <p class="slds-text-body--small slds-page-header__info">Deploy directly from GitHub to Salesforce <a target="_new" href="http://andyinthecloud.com/category/githubsfdeploy/" class="brand" id="heroku"><strong>andyinthecloud</strong></a></p>
 				</div>
 			</div>			
 		</div>
