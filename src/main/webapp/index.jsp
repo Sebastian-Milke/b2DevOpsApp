@@ -33,9 +33,11 @@ function updatebuttonhtml()
 	var repoName = $('#repo').val();
 	var ref = $('#ref').val();
 	var buttonhtml =
-		( $('#blogpaste').attr('checked') == 'checked' ? 
-			'<a href="https://githubsfdeploy.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
-			'<a href="https://githubsfdeploy.herokuapp.com">\n') +					
+		( $('#blogpaste').attr('checked') == 'checked' ?
+				// '<a href="https://githubsfdeploy.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
+				'<a href="https://b2dev-ops-app.herokuapp.com?owner=' + repoOwner +'&repo=' + repoName + (ref!='' ? '&ref=' + ref : '') + '">\n' :
+				// '<a href="https://githubsfdeploy.herokuapp.com">\n') +
+				'<a href="https://b2dev-ops-app.herokuapp.com/">\n') +
 			'  <img alt="Deploy to Salesforce"\n' +
 			'       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">\n' +
 		'</a>';
