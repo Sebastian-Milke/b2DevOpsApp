@@ -116,7 +116,8 @@ public class GitHubSalesforceDeployController {
 		HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
 		connection.setRequestMethod("POST");
 		connection.setRequestProperty("Accept", "application/json");
-		String urlParameters = "client_id=" + System.getenv(GITHUB_CLIENT_ID) + "&client_secret=" + System.getenv(GITHUB_CLIENT_SECRET)
+//		String urlParameters = "client_id=" + System.getenv(GITHUB_CLIENT_ID) + "&client_secret=" + System.getenv(GITHUB_CLIENT_SECRET)
+		String urlParameters = "client_id=" + "70e7fa0123bf77dab76c" + "&client_secret=" + "731497731edf2305acb56ad6ea8e0855dd26f740"
 					 +"&code=" + code;
 		// Send post request
 		connection.setDoOutput(true);
